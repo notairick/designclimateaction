@@ -257,8 +257,19 @@ body.dark-skin section.transparent {
 }
 
 body.dark-skin a {
-  color: #000;
+  color: #fff;
 }
+
+body.dark-skin p a {
+  color:rgba(255, 255, 255, 0.6);
+  text-decoration: underline;
+  transition: color 0.4s;
+}
+body.dark-skin p a:hover{
+  color: #fd9800;
+
+}
+
 
 section {
   position: relative;
@@ -1036,8 +1047,8 @@ a {
 }
 @media only screen and (max-width: 500px) {
 .btn .btn-background {
-  padding: .9rem 1.7rem;
-  font-size: 1.8rem;
+  padding: .5rem 1.2rem 0.5rem 1.2rem;
+  font: normal 800 1.4rem/1.7 "Raleway", sans-serif;
 }
 }
 
@@ -1070,8 +1081,8 @@ a {
 
 .btn-light-outline {
   color: #ffffff;
-  background: #fcbd00;
-  /* background: linear-gradient(180deg, #febf00e3 0%,  #ea0300db 100%); */
+  background-color: #fd9800;
+  border: 1px solid #ffffff;
 }
 
 .btn-light-outline .btn-background {
