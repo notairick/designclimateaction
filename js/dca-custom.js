@@ -195,38 +195,6 @@ $(function() {
   // KBW-Countdown End
   // --------------------------------------------- //
 
-  // --------------------------------------------- //
-  // Mailchimp Notify Form Start
-  // --------------------------------------------- //
-  $('.notify-form').ajaxChimp({
-    callback: mailchimpCallback,
-    url: 'https://gmail.us20.list-manage.com/subscribe/post?u=99597b271d8b8b52c2000921b&amp;id=17196326b3'
-  });
-
-  function mailchimpCallback(resp) {
-    if(resp.result === 'success') {
-      $('.notify').find('.form').addClass('is-hidden');
-      $('.notify').find('.subscription-ok').addClass('is-visible');
-      setTimeout(function() {
-        // Done Functions
-        $('.notify').find('.subscription-ok').removeClass('is-visible');
-        $('.notify').find('.form').delay(300).removeClass('is-hidden');
-        $('.notify-form').trigger("reset");
-      }, 5000);
-    } else if(resp.result === 'error') {
-      $('.notify').find('.form').addClass('is-hidden');
-      $('.notify').find('.subscription-error').html(resp.msg).addClass('is-visible');
-      setTimeout(function() {
-        // Done Functions
-        $('.notify').find('.subscription-error').removeClass('is-visible');
-        $('.notify').find('.form').delay(300).removeClass('is-hidden');
-        $('.notify-form').trigger("reset");
-      }, 5000);
-    }
-  };
-  // --------------------------------------------- //
-  // Mailchimp Notify Form End
-  // --------------------------------------------- //
 
   // --------------------------------------------- //
   // Write a Line Form Start
