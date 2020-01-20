@@ -215,7 +215,7 @@ $(function() {
       }, 5000);
     } else if(resp.result === 'error') {
       $('.notify').find('.form').addClass('is-hidden');
-      $('.notify').find('.subscription-error').addClass('is-visible');
+      $('.notify').find('.subscription-error').html(resp.msg).addClass('is-visible');
       setTimeout(function() {
         // Done Functions
         $('.notify').find('.subscription-error').removeClass('is-visible');
